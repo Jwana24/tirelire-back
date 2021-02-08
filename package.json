@@ -1,0 +1,26 @@
+{
+  "name": "tirelire-back",
+  "version": "1.0.0",
+  "description": "backend of React Native application tirelire, or piggybank in english",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jwana24/tirelire-back.git"
+  },
+  "author": "Johanna DÉTRIEUX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jwana24/tirelire-back/issues"
+  },
+  "homepage": "https://github.com/Jwana24/tirelire-back#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-router": "0.0.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
