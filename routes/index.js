@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const incomes = require('./income');
+const incomes = require('./incomes');
 
 router.use('/incomes', incomes);
 
