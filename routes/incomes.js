@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
     })
 });
 
-router.get('/', (_, res) => {
+router.get('/', (req, res) => {
     connection.query('SELECT * FROM income', [], (err, results) => {
         if (err) {
             res.status(500).send('Erreur lors de l\'affichage des revenus');
