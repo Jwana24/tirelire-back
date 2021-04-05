@@ -3,7 +3,11 @@ const router = express.Router();
 const connection = require('../connection');
 
 router.post('/', (req, res) => {
-    const dataVarIncome = req.body;
+    const dataVarIncome = {
+        var_income_name: req.body.name,
+        var_income_amount: req.body.amount,
+        var_income_date: req.body.date
+    }
 
     connection.query('INSERT INTO var_income SET ?', [dataVarIncome], (err, _) => {
         if (err) {
