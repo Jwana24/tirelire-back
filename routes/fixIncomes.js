@@ -16,13 +16,13 @@ router.post('/', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-    connection.query('SELECT * FROM fix_income', [], (err, results) => {
+    connection.query('SELECT *, DATE_FORMAT(fix_income_date, "%d/%m/%Y") as fix_income_date FROM fix_income', [], (err, results) => {
         if (err) {
             res.status(500).send('Erreur lors de l\'affichage des revenus fixes');
         }
         else if(results.length === 0){
             res.status(404).send('Aucun revenu fixe à afficher');
-            }
+        }
         else {
             res.status(200).json(results);
         }
