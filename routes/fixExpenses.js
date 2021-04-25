@@ -3,7 +3,11 @@ const router = express.Router();
 const connection = require('../connection');
 
 router.post('/', (req, res) => {
-    const dataFixExpense = req.body;
+    const dataFixExpense = {
+        fix_expense_name: req.body.name,
+        fix_expense_amount: req.body.amount,
+        fix_expense_date: req.body.date
+    }
 
     connection.query('INSERT INTO fix_expense SET ?', [dataFixExpense], (err, _) => {
         if (err) {
