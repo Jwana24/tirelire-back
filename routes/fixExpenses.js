@@ -24,9 +24,6 @@ router.get('/', (_, res) => {
         if (err) {
             res.status(500).send('Erreur lors de l\'affichage des dépenses fixes');
         }
-        else if(results.length === 0){
-            res.status(404).send('Aucune dépense fixe à afficher');
-            }
         else {
             res.status(200).json(results);
         }
