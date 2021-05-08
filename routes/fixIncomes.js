@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
     })
 });
 
-router.get('/', (req, res) => {
+router.get('/', (_, res) => {
     connection.query('SELECT *, DATE_FORMAT(fix_income_date, "%d/%m/%Y") as fix_income_date FROM fix_income', [], (err, results) => {
         if (err) {
             res.status(500).send('Erreur lors de l\'affichage des revenus fixes');

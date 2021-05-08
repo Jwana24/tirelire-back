@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 });
 
 router.get('/', (_, res) => {
-    connection.query('SELECT * FROM fix_expense', [], (err, results) => {
+    connection.query('SELECT *, DATE_FORMAT(fix_income_date, "%d/%m/%Y") as fix_income_date FROM fix_expense', [], (err, results) => {
         if (err) {
             res.status(500).send('Erreur lors de l\'affichage des dépenses fixes');
         }
